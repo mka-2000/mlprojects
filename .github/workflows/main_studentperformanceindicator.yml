@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - studentperformanceindicator
+name: Build and deploy Python app to Azure Web App - StudentPerformanceIndicator
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2AADF99AC91C4B7A95E00C58D733AB0D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_036D26011FEB4E46B04DA3B58D3A0423 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E6ADB9978FD24E21B14B404BD7613CE4 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CD5A5D74520949A2B2117F432335A38D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BA50FD312CB74042BA6564414A2E2327 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_11F023DF06D3477EBAD5D37F58C07FC6 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'studentperformanceindicator'
+          app-name: 'StudentPerformanceIndicator'
           slot-name: 'Production'
           
