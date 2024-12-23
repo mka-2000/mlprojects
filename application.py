@@ -12,6 +12,7 @@ app=application
 
 ## Route for a predict data page....
 
+
 @app.route('/',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
